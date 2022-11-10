@@ -42,3 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Revealed
+    uniqueID: 942898317
+    locked: 0
+  - name: Actively Lit
+    uniqueID: 1662169459
+    locked: 0
+  - name: Hidden
+    uniqueID: 145903655
+    locked: 0

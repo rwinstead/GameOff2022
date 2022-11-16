@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 { 
-
+    public int itemID;
     public string itemName;
 
     // Start is called before the first frame update
@@ -23,7 +23,7 @@ public class Key : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<CharacterInventory>().AddItem(itemName);
+            collision.gameObject.GetComponent<CharacterInventory>().AddItem(itemID);
             gameObject.SetActive(false);
         }
     }

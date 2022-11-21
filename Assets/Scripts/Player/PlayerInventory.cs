@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterInventory : MonoBehaviour
+public class PlayerInventory : MonoBehaviour
 {
     
     public ItemDatabase itemDb;

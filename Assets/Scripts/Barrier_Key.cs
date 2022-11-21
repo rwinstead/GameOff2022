@@ -12,7 +12,7 @@ public class Barrier_Key : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            bool hasKey = collision.gameObject.GetComponent<CharacterInventory>().CheckForItem(unlockKey);
+            bool hasKey = collision.gameObject.GetComponent<PlayerInventory>().CheckForItem(unlockKey);
             if(hasKey)
             {
                 gameObject.transform.parent.gameObject.SetActive(false);

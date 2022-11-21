@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UI_Update : MonoBehaviour
 {
-    public CharacterInventory inventory;
+    public PlayerInventory inventory;
 
     public GameObject InventorySlot1;
     public GameObject InventorySlot2;
@@ -16,7 +16,7 @@ public class UI_Update : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        CharacterInventory.ACT_UpdateInventory += UpdateInventoryHUD;
+        PlayerInventory.ACT_UpdateInventory += UpdateInventoryHUD;
     }
 
     // Update is called once per frame

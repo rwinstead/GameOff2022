@@ -1,6 +1,7 @@
 ﻿Shader "Custom/FOVStencilMask"
 {
-	Properties{}
+	Properties{
+	}
 
 	SubShader{
 

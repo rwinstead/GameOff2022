@@ -10,6 +10,10 @@ public class InputHandler : MonoBehaviour
 
     public static Action<float> ACT_ZoomControl;
     public static Action<Vector2> ACT_PlayerMoveInput;
+    public static Action ACT_PlayerSpacebarPressed;
+
+    protected bool SpacebarTriggered = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,5 +32,14 @@ public class InputHandler : MonoBehaviour
         rawInput.x = Input.GetAxisRaw("Horizontal");
         rawInput.y = Input.GetAxisRaw("Vertical");
         ACT_PlayerMoveInput?.Invoke(rawInput);
+
+        if(Input.GetKeyDown(KeyCode.Space)){
+            ACT_PlayerSpacebarPressed?.Invoke();
+            SpacebarTriggered = true;
+            print("Spacebar pressed");
+        }
+        else {
+            SpacebarTriggered = false;
+        }
     }
 }

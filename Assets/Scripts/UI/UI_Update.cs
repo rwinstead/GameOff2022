@@ -25,14 +25,22 @@ public class UI_Update : MonoBehaviour
     public GameObject DialogueBoxRight_portrait;
     public GameObject DialogueBoxRight_nameplate;
 
+    public GameObject DialogueBoxNoPortrait;
+    public GameObject DialogueBoxNoPortrait_textbox;
+    public GameObject DialogueBoxNoPortrait_nameplate;
+
     protected bool DialogueBoxActive = false;
     protected Queue<int> DialogueQueue = new Queue<int>();
+
+    public static Action<bool> ACT_DialogueBoxPause;
 
     // Start is called before the first frame update
     void Start()
     {
-        PlayerInventory.ACT_UpdateInventory += UpdateInventoryHUD;
         NPC.ACT_DialoguePopup += DialoguePopupHandler;
+        Door.ACT_DialoguePopup += DialoguePopupHandler;
+        
+        PlayerInventory.ACT_UpdateInventory += UpdateInventoryHUD;
         InputHandler.ACT_PlayerSpacebarPressed += DialogueInputHandler;
 
         DialogueBoxLeft.SetActive(false);
@@ -71,24 +79,33 @@ public class UI_Update : MonoBehaviour
     void DialoguePopupDisplay(int popupID){
         print("Popup display ID: "+popupID);
         DialoguePopup popup = dialogueDb.Lookup(popupID);
-        
-        print(popup.portraitLeftSide);
-        if(popup.portraitLeftSide == true){
+
+        if(popup.popupType == DialoguePopup.pType.Left){
             DialogueBoxRight.SetActive(false);
+            DialogueBoxNoPortrait.SetActive(false);
             DialogueBoxLeft_portrait.GetComponent<Image>().sprite = popup.portraitSprite;
             DialogueBoxLeft_nameplate.GetComponent<TextMeshProUGUI>().text = popup.characterSpeaking;
             DialogueBoxLeft_textbox.GetComponent<TextMeshProUGUI>().text = popup.message;
             DialogueBoxLeft.SetActive(true);
         }
-        else{
+        else if (popup.popupType == DialoguePopup.pType.Right){
             DialogueBoxLeft.SetActive(false);
+            DialogueBoxNoPortrait.SetActive(false);
             DialogueBoxRight_portrait.GetComponent<Image>().sprite = popup.portraitSprite;
             DialogueBoxRight_nameplate.GetComponent<TextMeshProUGUI>().text = popup.characterSpeaking;
             DialogueBoxRight_textbox.GetComponent<TextMeshProUGUI>().text = popup.message;
             DialogueBoxRight.SetActive(true);
         }
+        else {
+            DialogueBoxLeft.SetActive(false);
+            DialogueBoxRight.SetActive(false);
+            DialogueBoxNoPortrait_nameplate.GetComponent<TextMeshProUGUI>().text = popup.characterSpeaking;
+            DialogueBoxNoPortrait_textbox.GetComponent<TextMeshProUGUI>().text = popup.message;
+            DialogueBoxNoPortrait.SetActive(true);
+        }
 
         DialogueBoxActive = true;
+        ACT_DialogueBoxPause?.Invoke(true);
     }
 
     void DialogueAdvance(){
@@ -99,7 +116,9 @@ public class UI_Update : MonoBehaviour
         else{
             DialogueBoxLeft.SetActive(false);
             DialogueBoxRight.SetActive(false);
+            DialogueBoxNoPortrait.SetActive(false);
             DialogueBoxActive = false;
+            ACT_DialogueBoxPause?.Invoke(false);
         }
 
 

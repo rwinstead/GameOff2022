@@ -13,11 +13,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] FieldOfView FOV;
     [SerializeField] Camera mainCamera;
 
+    protected bool DialogueBoxPause = false;
+
     // Start is called before the first frame update
     void Start()
     {
         thisRb = GetComponent<Rigidbody2D>();
         InputHandler.ACT_PlayerMoveInput += PlayerControlHandler;
+        UI_Update.ACT_DialogueBoxPause += DialogueBoxPauseHandler;
         thisRb.transform.position = SpawnPoint.transform.position;
     }
 
@@ -45,8 +48,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Move(float moveX, float moveY)
     {
-        Vector2 movement = new Vector2(moveX * moveSpeed, moveY * moveSpeed);
-        thisRb.velocity = movement;
+        if(DialogueBoxPause == false){
+            Vector2 movement = new Vector2(moveX * moveSpeed, moveY * moveSpeed);
+            thisRb.velocity = movement;
+        }
     }
 
     private void PlayerControlHandler(Vector2 playerInput)
@@ -60,6 +65,10 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Reached Goal");
         }
+    }
+
+    public void DialogueBoxPauseHandler(bool isActive){
+        DialogueBoxPause = isActive;
     }
 
 }

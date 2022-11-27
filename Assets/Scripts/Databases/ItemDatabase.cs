@@ -11,7 +11,9 @@ public class ItemDatabase : MonoBehaviour
     void Start()
     {
         itemDb.Add(new Item(0, "Blue Key", "A Blue Key", "bluekey"));
-        itemDb.Add(new Item(1, "Green Key", "A Green Key", "greenkey"));
+        itemDb.Add(new Item(1, "Pantry Key", "Key to the Pantry", "greenkey"));
+        itemDb.Add(new Item(2, "Wardrobe Key", "Key to the Wardrobe", "bluekey"));
+        itemDb.Add(new Item(3, "Pie Supplies", "Supplies to make a pie", "pie"));
     }
 
     public Item Lookup(int itemID){

@@ -52,6 +52,9 @@ public class PlayerMovement : MonoBehaviour
             Vector2 movement = new Vector2(moveX * moveSpeed, moveY * moveSpeed);
             thisRb.velocity = movement;
         }
+        else{
+            thisRb.velocity = new Vector2(0,0);
+        }
     }
 
     private void PlayerControlHandler(Vector2 playerInput)

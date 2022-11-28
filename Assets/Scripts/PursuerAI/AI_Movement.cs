@@ -5,10 +5,15 @@ using UnityEngine.AI;
 
 public class AI_Movement : MonoBehaviour
 {
+    /// <summary>
+    /// Use this singleton to change the state machine of the AI
+    /// </summary>
+    public static AI_Movement instance;
+
     Vector3 target;
     NavMeshAgent agent;
     public Transform player;
-    public RoomWaypoints startingWaypoints;
+    public List<Transform> startingWaypoints;
     int currentWaypoint = 0;
 
     //Each room should have waypoints already created in them. This way, when player hides,
@@ -21,27 +26,34 @@ public class AI_Movement : MonoBehaviour
     //Following is a slow walk towards player
     //Sprinting means player is in range and Marco is trying to catch them
     //Wandering means player is hiding and Marco goes elsewhere
-    enum State
+    public enum State
     {
         Following,
         Sprinting,
-        Wandering
+        Wandering,
+        Idle
     }
 
-    State state = State.Wandering;
+    State state = State.Following;
 
     private void Awake()
     {
+        if (instance == null) instance = this;
+        else DestroyImmediate(this);
+
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-        waypoints = startingWaypoints.roomWaypoints;
+        waypoints = startingWaypoints;
     }
 
     private void Update()
     {
         SetTargetPosition();
         UpdatePosition();
+        //For debugging
+        //TODO: REMOVE  
+        if(Input.GetKeyDown(KeyCode.Space)) state = State.Wandering;
     }
 
     void SetTargetPosition()
@@ -58,6 +70,9 @@ public class AI_Movement : MonoBehaviour
             case State.Wandering:
                 target = waypoints[currentWaypoint].position;
                 break;
+            case State.Idle:
+                target = transform.position;
+                break;
         }
     }
 
@@ -71,5 +86,10 @@ public class AI_Movement : MonoBehaviour
     void UpdatePosition()
     {
         agent.SetDestination(new Vector3(target.x, target.y, transform.position.z));
+    }
+
+    public void SetState(State newState)
+    {
+        state = newState;
     }
 }

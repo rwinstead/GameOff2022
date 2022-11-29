@@ -10,6 +10,10 @@ public class AI_Movement : MonoBehaviour
     /// </summary>
     public static AI_Movement instance;
 
+    [Header("Movement Speeds")]
+    public float walkingSpeed = 3f;
+    public float runningSpeed = 4.5f;
+
     Vector3 target;
     NavMeshAgent agent;
     public Transform player;
@@ -62,10 +66,11 @@ public class AI_Movement : MonoBehaviour
         {
             case State.Following:
                 target = player.position;
+                agent.speed = walkingSpeed;
                 break;
             case State.Sprinting:
                 target = player.position;
-                agent.speed = 5f;
+                agent.speed = runningSpeed;
                 break;
             case State.Wandering:
                 target = waypoints[currentWaypoint].position;
@@ -91,5 +96,10 @@ public class AI_Movement : MonoBehaviour
     public void SetState(State newState)
     {
         state = newState;
+        if (newState == State.Sprinting) agent.speed = runningSpeed;
+        if (newState == State.Following) agent.speed = walkingSpeed;
+        if (newState == State.Wandering) agent.speed = walkingSpeed;
+        if (newState == State.Idle) agent.speed = 0;
+
     }
 }

@@ -15,6 +15,10 @@ public class PlayerMovement : MonoBehaviour
 
     protected bool DialogueBoxPause = false;
 
+    //Animation values
+    Animator anim;
+    string currentAnimState;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
         InputHandler.ACT_PlayerMoveInput += PlayerControlHandler;
         UI_Update.ACT_DialogueBoxPause += DialogueBoxPauseHandler;
         thisRb.transform.position = SpawnPoint.transform.position;
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,10 +39,14 @@ public class PlayerMovement : MonoBehaviour
         Vector3 worldPosition = mainCamera.ScreenToWorldPoint(mousePos);
         Vector3 direction = new Vector3(
             worldPosition.x - transform.position.x,
-         worldPosition.y - transform.position.y, worldPosition.z);
-
-
+            worldPosition.y - transform.position.y, worldPosition.z);
         FOV.SetAimDirection(direction);
+
+        if (playerInput_move.x == 0 && playerInput_move.y == 0) ChangeAnimationState("Idle");
+        else if (playerInput_move.x > 0) ChangeAnimationState("PrincessWalkRight");
+        else if (playerInput_move.x < 0) ChangeAnimationState("PrincessWalkLeft");
+        else if (playerInput_move.y > 0) ChangeAnimationState("PrincessWalkUp");
+        else if (playerInput_move.y < 0) ChangeAnimationState("PrincessWalkDown");
 
     }
 
@@ -72,6 +81,15 @@ public class PlayerMovement : MonoBehaviour
 
     public void DialogueBoxPauseHandler(bool isActive){
         DialogueBoxPause = isActive;
+    }
+
+    public void ChangeAnimationState(string newState)
+    {
+        if (currentAnimState == newState) return;
+
+        anim.Play(newState);
+
+        currentAnimState = newState;
     }
 
 }

@@ -567,8 +567,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 263730049
+  m_SortingLayer: 4
   m_SortingOrder: 32767
   m_Sprite: {fileID: 1580364818, guid: 24537e152a9b16d4485214cf8b6ba123, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -644,7 +644,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 6
-  SpawnPoint: {fileID: 0}
   FOV: {fileID: 7053411933267364339}
   mainCamera: {fileID: 7053411932198244896}
 --- !u!114 &1125012002494378752

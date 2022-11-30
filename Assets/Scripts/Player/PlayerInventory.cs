@@ -9,7 +9,7 @@ public class PlayerInventory : MonoBehaviour
     public ItemDatabase itemDb;
     public List<Item> InventoryList = new List<Item>();
 
-    protected int Inventory_MaxSize = 4;
+    protected int Inventory_MaxSize = 6;
     
     public static Action<Item> ACT_UpdateInventory;
 
@@ -20,10 +20,12 @@ public class PlayerInventory : MonoBehaviour
     }
 
     public void AddItem(int itemID){
-        Item item = itemDb.Lookup(itemID);
-        InventoryList.Add(item);
-        Debug.Log("Added "+ item.itemName);
-        ACT_UpdateInventory?.Invoke(item);
+        if(CheckForItem(itemID) == false){
+            Item item = itemDb.Lookup(itemID);
+            InventoryList.Add(item);
+            Debug.Log("Added "+ item.itemName);
+            ACT_UpdateInventory?.Invoke(item);
+        }
     }
 
     public void RemoveItem(int itemID)

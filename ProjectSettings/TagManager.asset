@@ -52,3 +52,6 @@ TagManager:
   - name: Hidden
     uniqueID: 145903655
     locked: 0
+  - name: NoLightingButGlobal
+    uniqueID: 263730049
+    locked: 0

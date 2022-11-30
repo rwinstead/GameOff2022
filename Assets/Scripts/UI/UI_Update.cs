@@ -14,6 +14,8 @@ public class UI_Update : MonoBehaviour
     public GameObject InventorySlot2;
     public GameObject InventorySlot3;
     public GameObject InventorySlot4;
+    public GameObject InventorySlot5;
+    public GameObject InventorySlot6;
 
     public GameObject DialogueBoxLeft;
     public GameObject DialogueBoxLeft_textbox;
@@ -61,6 +63,8 @@ public class UI_Update : MonoBehaviour
         if(numItems >= 2){InventorySlot2.GetComponent<Image>().sprite = inventory.InventoryList[1].itemIcon;}
         if(numItems >= 3){InventorySlot3.GetComponent<Image>().sprite = inventory.InventoryList[2].itemIcon;}
         if(numItems >= 4){InventorySlot4.GetComponent<Image>().sprite = inventory.InventoryList[3].itemIcon;}
+        if(numItems >= 5){InventorySlot5.GetComponent<Image>().sprite = inventory.InventoryList[4].itemIcon;}
+        if(numItems >= 6){InventorySlot6.GetComponent<Image>().sprite = inventory.InventoryList[5].itemIcon;}
     }
 
     void DialogueInputHandler(){

@@ -831,13 +831,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_34
+      name: candle_anim_1
       rect:
         serializedVersion: 2
         x: 250
         y: 465
         width: 9
-        height: 15
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -852,13 +852,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_35
+      name: candle-anim-2
       rect:
         serializedVersion: 2
         x: 261
         y: 465
         width: 9
-        height: 15
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -873,7 +873,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_36
+      name: candle-anim-3
       rect:
         serializedVersion: 2
         x: 272
@@ -1062,7 +1062,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_45
+      name: candle_base
       rect:
         serializedVersion: 2
         x: 228
@@ -1083,13 +1083,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_46
+      name: candletop_anim-1
       rect:
         serializedVersion: 2
         x: 251
         y: 414
         width: 5
-        height: 9
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1104,13 +1104,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_47
+      name: candletop_anim-2
       rect:
         serializedVersion: 2
         x: 262
         y: 414
         width: 5
-        height: 9
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1125,7 +1125,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_48
+      name: candletop_anim-3
       rect:
         serializedVersion: 2
         x: 273
@@ -1146,7 +1146,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_49
+      name: wall_candle_base_drip
       rect:
         serializedVersion: 2
         x: 281
@@ -1167,7 +1167,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_50
+      name: wall_candle_base
       rect:
         serializedVersion: 2
         x: 292
@@ -1293,13 +1293,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_56
+      name: flame_anim-5
       rect:
         serializedVersion: 2
         x: 280
         y: 388
         width: 6
-        height: 8
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1314,13 +1314,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_57
+      name: flame_anim-6
       rect:
         serializedVersion: 2
         x: 289
         y: 388
-        width: 5
-        height: 9
+        width: 6
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1335,13 +1335,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_58
+      name: flame_anim-7
       rect:
         serializedVersion: 2
         x: 297
         y: 388
-        width: 5
-        height: 10
+        width: 6
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1356,12 +1356,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_59
+      name: flame_anim-8
       rect:
         serializedVersion: 2
         x: 305
         y: 388
-        width: 5
+        width: 6
         height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1398,13 +1398,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_61
+      name: flame_anim-1
       rect:
         serializedVersion: 2
         x: 250
         y: 388
-        width: 12
-        height: 6
+        width: 6
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1419,13 +1419,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_62
+      name: flame_anim-3
       rect:
         serializedVersion: 2
         x: 264
         y: 388
-        width: 5
-        height: 6
+        width: 6
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1440,13 +1440,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_63
+      name: flame_anim-4
       rect:
         serializedVersion: 2
         x: 272
         y: 388
         width: 6
-        height: 6
+        height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1931,7 +1931,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1952,7 +1952,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1973,7 +1973,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1981,6 +1981,27 @@ TextureImporter:
       bones: []
       spriteID: e01a1fbe133e93a468c147190d835929
       internalID: 1970071657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: flame_anim-2
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 388
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac33571661d848c4aaa1e9c5682754da
+      internalID: 1409805456
       vertices: []
       indices: 
       edges: []
@@ -1997,81 +2018,80 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Props_38: -1977508520
-      Props_48: -1872483317
       Props_33: -1869667235
+      flame_anim-2: 1409805456
       Props_55: 1285525573
       Props_75: -756977513
+      flame_anim-6: -159286489
       Props_10: -76685213
       Props_65: -387469457
+      flame_anim-3: 1763702671
       Props_43: -1306268296
-      Props_50: -502683363
       Props_52: 1209331323
       Props_42: -1193746660
       Props_17: 1276404784
       Props_44: -167354453
       Props_25: -688990757
       Props_69: -1549280328
-      Props_45: 1686073092
       Props_6: 1854806213
       Props_72: -1534428631
+      candletop_anim-2: 941996106
       Props_15: 1285654892
       Props_28: -1603869979
+      wall_candle_base: -502683363
       Props_71: -1495696324
       Props_12: 1163072779
       Props_85: -1905406059
       Props_29: 878296853
+      flame_anim-7: -589499895
       Props_18: 1323396289
+      candle-anim-2: 413985594
       Props_0: -281319051
       Props_24: 1639480321
+      candle-anim-3: -1068686870
       Props_13: -955306309
-      Props_34: -1253988144
-      Props_20: 623770441
-      Props_46: 1139823561
       Props_51: 1877273276
+      Props_20: 623770441
       Props_88: 1970071657
       Props_31: -1973169815
-      Props_47: 941996106
       Props_23: -1993323846
       Props_68: -1342773204
       Props_8: -893048103
       Props_4: 1396358084
-      Props_61: -419049401
       Props_66: -1747144394
       Props_14: 1920819519
       Props_21: 1973476065
       Props_86: -130273298
-      Props_35: 413985594
       Props_9: 1626875309
       Props_79: -2094058615
       Props_84: -916982130
-      Props_56: -1728404229
       Props_80: -891268363
       Props_26: -160805616
       Props_2: -696214832
       Props_70: -1559321986
       Props_87: -256187071
       Props_53: -447552412
+      candletop_anim-1: 1139823561
       Props_73: 913644857
-      Props_58: -589499895
       Props_60: -1116782303
       Props_64: 798012205
       Props_39: -542031234
       Props_77: -870773830
+      candle_anim_1: -1253988144
+      flame_anim-5: -1728404229
       Props_78: 298656990
-      Props_49: -1425806534
       Props_54: -894900615
       Props_40: 1553454651
-      Props_63: 395791080
+      candle_base: 1686073092
       Props_1: 862717914
-      Props_59: -1001178609
       Props_32: -787185052
       Props_5: 1848986869
-      Props_62: 1763702671
       Props_76: 2010857763
+      flame_anim-8: -1001178609
       Props_19: -1011376757
+      candletop_anim-3: -1872483317
       Props_37: 547086571
       Props_81: 2011509240
-      Props_36: -1068686870
       Props_41: -919690587
       Props_22: -2001283634
       Props_7: 1942548716
@@ -2079,12 +2099,14 @@ TextureImporter:
       Props_82: 4956914
       Props_27: -1051662563
       Props_3: 1346270797
-      Props_57: -159286489
+      flame_anim-1: -419049401
       Props_16: 136038005
       Props_74: 1972836631
       Props_30: 366620902
       Props_83: 161430705
       Props_11: -195969100
+      flame_anim-4: 395791080
+      wall_candle_base_drip: -1425806534
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

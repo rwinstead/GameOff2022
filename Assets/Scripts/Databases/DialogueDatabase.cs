@@ -21,12 +21,12 @@ public class DialogueDatabase : MonoBehaviour
         dialogueDb.Add(new DialoguePopup(4,"","This door is locked and requires a key","","None"));
 
         dialogueDb.Add(new DialoguePopup(5, "Morel", "What a lovely feast, Princess Plum.\nYou've really out done yourself this time.", "Morel", "Left"));
-        dialogueDb.Add(new DialoguePopup(6, "Morel", "Now who is that strapping lad ente—", "Morel", "Left"));
-        dialogueDb.Add(new DialoguePopup(7, "Marco", "M'lady! Letsa go—", "Marco", "Left"));
+        dialogueDb.Add(new DialoguePopup(6, "Morel", "Now who is that strapping lad ente-", "Morel", "Left"));
+        dialogueDb.Add(new DialoguePopup(7, "Marco", "M'lady! Letsa go-", "Marco", "Left"));
         dialogueDb.Add(new DialoguePopup(8, "Princess Plum", "Oh God, oh no.\nIt's that weird plumber who fixed my sink last week.", "Princess", "Right"));
-        dialogueDb.Add(new DialoguePopup(9, "Princess Plum", "He won't leave me alone, and he keeps muttering weird shit like 'Wahoo!'.", "Princess", "Right"));
-        dialogueDb.Add(new DialoguePopup(10, "Morel", "Quickly your highness, escape through the kitchens!\nI'll tell him he has the wrong castle.", "Morel", "Right"));
-        dialogueDb.Add(new DialoguePopup(11, "Morel", "Not sure if he'll buy it for long, though. Now GO!", "Morel", "Right"));
+        dialogueDb.Add(new DialoguePopup(9, "Princess Plum", "He won't leave me alone, and he keeps muttering weird nonsense like 'Wahoo!'.", "Princess", "Right"));
+        dialogueDb.Add(new DialoguePopup(10, "Morel", "Quickly your highness, escape through the kitchens!\nI'll tell him he has the wrong castle.", "Morel", "Left"));
+        dialogueDb.Add(new DialoguePopup(11, "Morel", "Not sure if he'll buy it for long, though. Now GO!", "Morel", "Left"));
     }
 
     public DialoguePopup Lookup(int popupID){

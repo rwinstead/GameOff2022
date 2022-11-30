@@ -40,6 +40,10 @@ public class AI_Movement : MonoBehaviour
 
     State state = State.Following;
 
+    Animator anim;
+    public string currentAnimState;
+    Rigidbody2D rb;
+
     private void Awake()
     {
         if (instance == null) instance = this;
@@ -49,6 +53,8 @@ public class AI_Movement : MonoBehaviour
         agent.updateRotation = false;
         agent.updateUpAxis = false;
         waypoints = startingWaypoints;
+        anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -58,6 +64,12 @@ public class AI_Movement : MonoBehaviour
         //For debugging
         //TODO: REMOVE  
         if(Input.GetKeyDown(KeyCode.Space)) state = State.Wandering;
+
+        if (agent.velocity.x == 0 && agent.velocity.y == 0) ChangeAnimationState("MarcoIdle");
+        else if (agent.velocity.x > 0) ChangeAnimationState("MarcoWalkRight");
+        else if (agent.velocity.x < 0) ChangeAnimationState("MarcoWalkLeft");
+        else if (agent.velocity.y > 0) ChangeAnimationState("MarcoWalkUp");
+        else if (agent.velocity.y < 0) ChangeAnimationState("MarcoWalkDown");
     }
 
     void SetTargetPosition()
@@ -102,4 +114,13 @@ public class AI_Movement : MonoBehaviour
         if (newState == State.Idle) agent.speed = 0;
 
     }
+
+    void ChangeAnimationState(string newState)
+    {
+        if (newState == currentAnimState) return;
+
+        anim.Play(newState);
+        currentAnimState = newState;
+    }
+
 }

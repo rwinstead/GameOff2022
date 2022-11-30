@@ -18,7 +18,7 @@ public class DialoguePopup
         this.popupID = popupID;
         this.characterSpeaking = characterSpeaking;
         this.message = message;
-        this.portraitSprite = Resources.Load<Sprite>("Sprites/CharacterPortraits/" + filename);
+        this.portraitSprite = Resources.Load<Sprite>("Sprites/Portraits/" + filename);
         
         if(popuptype == "Left"){
             this.popupType = pType.Left;

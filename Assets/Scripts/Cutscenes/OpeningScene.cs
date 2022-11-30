@@ -23,6 +23,9 @@ public class OpeningScene : MonoBehaviour
     //Player that is used in actual game, not opening scene
     public GameObject mainPlayer;
 
+    //Actual pursuer
+    public GameObject mainMarco;
+
     private void Awake()
     {
         UI_Update.ACT_ResolvedDialogue += TriggerFromDialogue;
@@ -80,6 +83,7 @@ public class OpeningScene : MonoBehaviour
         Princess.gameObject.SetActive(false);
         openingCam.gameObject.SetActive(false);
         mainPlayer.gameObject.SetActive(true);
+        mainMarco.gameObject.SetActive(true);
     }
 
     IEnumerator LerpPosition(Vector2 targetPosition, float duration, Transform character, string name)

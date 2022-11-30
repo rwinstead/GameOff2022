@@ -11,6 +11,8 @@ public class Door : MonoBehaviour
     public int itemRequired;
 
     public static Action<int> ACT_DialoguePopup;
+    public static Action ACT_PlayUnlockDoorSFX;
+    public static Action ACT_PlayLockedDoorSFX;
 
     // Start is called before the first frame update
     void Start()
@@ -32,13 +34,16 @@ public class Door : MonoBehaviour
                 bool hasKey = collision.gameObject.GetComponent<PlayerInventory>().CheckForItem(itemRequired);
                 if(hasKey)
                 {
+                    ACT_PlayUnlockDoorSFX?.Invoke();
                     gameObject.SetActive(false);
                 }
                 else{
+                    ACT_PlayLockedDoorSFX?.Invoke();
                     ACT_DialoguePopup?.Invoke(4);
                 }
             }
             else{
+                ACT_PlayUnlockDoorSFX?.Invoke();
                 gameObject.SetActive(false);
             }
             

@@ -36,7 +36,6 @@ public class InputHandler : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space)){
             ACT_PlayerSpacebarPressed?.Invoke();
             SpacebarTriggered = true;
-            print("Spacebar pressed");
         }
         else {
             SpacebarTriggered = false;

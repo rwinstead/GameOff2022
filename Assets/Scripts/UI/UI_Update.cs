@@ -35,6 +35,7 @@ public class UI_Update : MonoBehaviour
     protected Queue<int> DialogueQueue = new Queue<int>();
 
     public static Action<bool> ACT_DialogueBoxPause;
+    public static Action ACT_PlayDialogueBoxSFX;
 
     /// <summary>
     // This fires when a dialogue popup resolves to trigger things in the scene;
@@ -118,6 +119,7 @@ public class UI_Update : MonoBehaviour
 
         DialogueBoxActive = true;
         ACT_DialogueBoxPause?.Invoke(true);
+        ACT_PlayDialogueBoxSFX?.Invoke();
     }
 
     void DialogueAdvance(){

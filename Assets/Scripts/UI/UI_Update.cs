@@ -36,12 +36,20 @@ public class UI_Update : MonoBehaviour
 
     public static Action<bool> ACT_DialogueBoxPause;
 
+    /// <summary>
+    // This fires when a dialogue popup resolves to trigger things in the scene;
+    /// </summary>
+    public static Action<int> ACT_ResolvedDialogue;
+
+    int prevDialogueID;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         NPC.ACT_DialoguePopup += DialoguePopupHandler;
         Door.ACT_DialoguePopup += DialoguePopupHandler;
-        
+        OpeningScene.ACT_DialoguePopup += DialoguePopupHandler;
+
         PlayerInventory.ACT_UpdateInventory += UpdateInventoryHUD;
         InputHandler.ACT_PlayerSpacebarPressed += DialogueInputHandler;
 
@@ -113,20 +121,20 @@ public class UI_Update : MonoBehaviour
     }
 
     void DialogueAdvance(){
-        if(DialogueQueue.Count > 0){
+        if (DialogueQueue.Count > 0){
+            prevDialogueID = DialogueQueue.Peek() - 1;
             int popupID = DialogueQueue.Dequeue();
             DialoguePopupDisplay(popupID);
         }
         else{
+            prevDialogueID++;
             DialogueBoxLeft.SetActive(false);
             DialogueBoxRight.SetActive(false);
             DialogueBoxNoPortrait.SetActive(false);
             DialogueBoxActive = false;
             ACT_DialogueBoxPause?.Invoke(false);
         }
-
-
-        
+        ACT_ResolvedDialogue?.Invoke(prevDialogueID);
 
     }
 }

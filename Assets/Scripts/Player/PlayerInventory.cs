@@ -12,6 +12,7 @@ public class PlayerInventory : MonoBehaviour
     protected int Inventory_MaxSize = 6;
     
     public static Action<Item> ACT_UpdateInventory;
+    public static Action ACT_PlayCollectItemSFX;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class PlayerInventory : MonoBehaviour
             InventoryList.Add(item);
             Debug.Log("Added "+ item.itemName);
             ACT_UpdateInventory?.Invoke(item);
+            ACT_PlayCollectItemSFX?.Invoke();
         }
     }
 

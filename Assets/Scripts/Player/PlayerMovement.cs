@@ -6,7 +6,7 @@ using CodeMonkey.Utils;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 6f;
-    public GameObject SpawnPoint;
+    //public GameObject SpawnPoint;
     private Rigidbody2D thisRb;
     
     private Vector2 playerInput_move;
@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
         thisRb = GetComponent<Rigidbody2D>();
         InputHandler.ACT_PlayerMoveInput += PlayerControlHandler;
         UI_Update.ACT_DialogueBoxPause += DialogueBoxPauseHandler;
-        thisRb.transform.position = SpawnPoint.transform.position;
+        //thisRb.transform.position = SpawnPoint.transform.position;
         anim = GetComponent<Animator>();
     }
 

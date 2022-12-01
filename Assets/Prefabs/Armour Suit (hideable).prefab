@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 4877760092430730645}
   - component: {fileID: 4877760092430730646}
   - component: {fileID: 4877760092430730644}
+  - component: {fileID: 193806123727863628}
   m_Layer: 0
   m_Name: Armour Suit
   m_TagString: Untagged
@@ -221,3 +222,19 @@ PolygonCollider2D:
       - {x: 0.25, y: -0.515625}
       - {x: 0.34375, y: -0.296875}
       - {x: 0.34375, y: 0.515625}
+--- !u!114 &193806123727863628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4877760092430730647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OverrideArea: 1
+  m_Area: 1
+  m_IgnoreFromBuild: 0
+  m_AffectedAgents: ffffffff

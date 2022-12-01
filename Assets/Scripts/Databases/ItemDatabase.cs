@@ -11,10 +11,11 @@ public class ItemDatabase : MonoBehaviour
     void Start()
     {
         itemDb.Add(new Item(0, "Blue Key", "A Blue Key", "bluekey"));
-        itemDb.Add(new Item(1, "Pantry Key", "Key to the Pantry", "greenkey"));
+        itemDb.Add(new Item(1, "Pantry Key", "Key to the Pantry", "brownkey"));
         itemDb.Add(new Item(2, "Wardrobe Key", "Key to the Wardrobe", "bluekey"));
         itemDb.Add(new Item(3, "Armory Key", "Key to the Armory", "redkey"));
-        itemDb.Add(new Item(4, "Pie Supplies", "Supplies to make a pie", "pie"));
+        itemDb.Add(new Item(4, "Blueberry Pie", "A tasty blueberry pie", "pie"));
+        itemDb.Add(new Item(5, "Pie Ingredients", "Ingredients to make a pie", "ingredients"));
     }
 
     public Item Lookup(int itemID){

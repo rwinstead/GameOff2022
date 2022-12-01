@@ -4,17 +4,7 @@ using UnityEngine;
 
 public class PlayerDialogueTracker : MonoBehaviour
 {
-    public bool canOpenPantryDoor = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public bool hasTalkedToGuardsAboutPie = false;
+    public bool hasTalkedToCooksAboutPie = false;
+    public bool hasGivenGuardsPie = false;
 }

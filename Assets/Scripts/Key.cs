@@ -5,7 +5,6 @@ using UnityEngine;
 public class Key : MonoBehaviour
 { 
     public int itemID;
-    public string itemName;
 
     // Start is called before the first frame update
     void Start()

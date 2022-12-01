@@ -50,12 +50,20 @@ public class UI_Update : MonoBehaviour
         NPC.ACT_DialoguePopup += DialoguePopupHandler;
         Door.ACT_DialoguePopup += DialoguePopupHandler;
         OpeningScene.ACT_DialoguePopup += DialoguePopupHandler;
+        ItemPickup.ACT_DialoguePopup += DialoguePopupHandler;
+        Interactables.ACT_DialoguePopup += DialoguePopupHandler;
 
         PlayerInventory.ACT_UpdateInventory += UpdateInventoryHUD;
         InputHandler.ACT_PlayerSpacebarPressed += DialogueInputHandler;
 
         DialogueBoxLeft.SetActive(false);
         DialogueBoxRight.SetActive(false);
+        InventorySlot1.SetActive(false);
+        InventorySlot2.SetActive(false);
+        InventorySlot3.SetActive(false);
+        InventorySlot4.SetActive(false);
+        InventorySlot5.SetActive(false);
+        InventorySlot6.SetActive(false);
     }
 
     // Update is called once per frame
@@ -68,12 +76,36 @@ public class UI_Update : MonoBehaviour
         print("Update HUD");
         int numItems = inventory.InventoryList.Count;
         print(numItems);
-        if(numItems >= 1){InventorySlot1.GetComponent<Image>().sprite = inventory.InventoryList[0].itemIcon;}
-        if(numItems >= 2){InventorySlot2.GetComponent<Image>().sprite = inventory.InventoryList[1].itemIcon;}
-        if(numItems >= 3){InventorySlot3.GetComponent<Image>().sprite = inventory.InventoryList[2].itemIcon;}
-        if(numItems >= 4){InventorySlot4.GetComponent<Image>().sprite = inventory.InventoryList[3].itemIcon;}
-        if(numItems >= 5){InventorySlot5.GetComponent<Image>().sprite = inventory.InventoryList[4].itemIcon;}
-        if(numItems >= 6){InventorySlot6.GetComponent<Image>().sprite = inventory.InventoryList[5].itemIcon;}
+        if(numItems >= 1)
+        {
+            InventorySlot1.SetActive(true);
+            InventorySlot1.transform.Find("Image").GetComponent<Image>().sprite = inventory.InventoryList[0].itemIcon;
+        }
+        if(numItems >= 2)
+        {
+            InventorySlot2.SetActive(true);
+            InventorySlot2.transform.Find("Image").GetComponent<Image>().sprite = inventory.InventoryList[1].itemIcon;
+        }
+        if(numItems >= 3)
+        {
+            InventorySlot3.SetActive(true);
+            InventorySlot3.transform.Find("Image").GetComponent<Image>().sprite = inventory.InventoryList[2].itemIcon;
+        }
+        if(numItems >= 4)
+        {
+            InventorySlot4.SetActive(true);
+            InventorySlot4.transform.Find("Image").GetComponent<Image>().sprite = inventory.InventoryList[3].itemIcon;
+        }
+        if(numItems >= 5)
+        {
+            InventorySlot5.SetActive(true);
+            InventorySlot5.transform.Find("Image").GetComponent<Image>().sprite = inventory.InventoryList[4].itemIcon;
+        }
+        if(numItems >= 6)
+        {
+            InventorySlot6.SetActive(true);
+            InventorySlot6.transform.Find("Image").GetComponent<Image>().sprite = inventory.InventoryList[5].itemIcon;
+        }
     }
 
     void DialogueInputHandler(){
@@ -90,7 +122,7 @@ public class UI_Update : MonoBehaviour
     }
 
     void DialoguePopupDisplay(int popupID){
-        print("Popup display ID: "+popupID);
+        //print("Popup display ID: "+popupID);
         DialoguePopup popup = dialogueDb.Lookup(popupID);
 
         if(popup.popupType == DialoguePopup.pType.Left){

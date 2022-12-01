@@ -243,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_6
+      name: brasier_base
       rect:
         serializedVersion: 2
         x: 150
@@ -348,7 +348,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_11
+      name: brazier_anim-1
       rect:
         serializedVersion: 2
         x: 158
@@ -432,13 +432,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_15
+      name: brazier_anim-2
       rect:
         serializedVersion: 2
         x: 158
         y: 585
         width: 18
-        height: 12
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -474,13 +474,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Props_17
+      name: brazier_anim-3
       rect:
         serializedVersion: 2
         x: 158
         y: 562
         width: 18
-        height: 13
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1994,7 +1994,7 @@ TextureImporter:
         width: 6
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -2029,14 +2029,11 @@ TextureImporter:
       Props_43: -1306268296
       Props_52: 1209331323
       Props_42: -1193746660
-      Props_17: 1276404784
       Props_44: -167354453
       Props_25: -688990757
       Props_69: -1549280328
-      Props_6: 1854806213
       Props_72: -1534428631
       candletop_anim-2: 941996106
-      Props_15: 1285654892
       Props_28: -1603869979
       wall_candle_base: -502683363
       Props_71: -1495696324
@@ -2047,6 +2044,7 @@ TextureImporter:
       Props_18: 1323396289
       candle-anim-2: 413985594
       Props_0: -281319051
+      brazier_anim-1: -195969100
       Props_24: 1639480321
       candle-anim-3: -1068686870
       Props_13: -955306309
@@ -2058,14 +2056,15 @@ TextureImporter:
       Props_68: -1342773204
       Props_8: -893048103
       Props_4: 1396358084
+      Props_86: -130273298
       Props_66: -1747144394
       Props_14: 1920819519
       Props_21: 1973476065
-      Props_86: -130273298
       Props_9: 1626875309
       Props_79: -2094058615
       Props_84: -916982130
       Props_80: -891268363
+      brazier_anim-3: 1276404784
       Props_26: -160805616
       Props_2: -696214832
       Props_70: -1559321986
@@ -2098,15 +2097,16 @@ TextureImporter:
       Props_67: -1634093528
       Props_82: 4956914
       Props_27: -1051662563
+      brazier_anim-2: 1285654892
       Props_3: 1346270797
       flame_anim-1: -419049401
       Props_16: 136038005
       Props_74: 1972836631
       Props_30: 366620902
       Props_83: 161430705
-      Props_11: -195969100
       flame_anim-4: 395791080
       wall_candle_base_drip: -1425806534
+      brasier_base: 1854806213
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

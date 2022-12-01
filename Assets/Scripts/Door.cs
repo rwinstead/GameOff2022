@@ -35,7 +35,7 @@ public class Door : MonoBehaviour
                 if(hasKey)
                 {
                     ACT_PlayUnlockDoorSFX?.Invoke();
-                    gameObject.SetActive(false);
+                    gameObject.transform.parent.gameObject.transform.parent.gameObject.SetActive(false);
                 }
                 else{
                     ACT_PlayLockedDoorSFX?.Invoke();

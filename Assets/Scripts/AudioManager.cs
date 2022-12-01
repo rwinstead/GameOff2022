@@ -34,27 +34,27 @@ public class AudioManager : MonoBehaviour
 
     void playDialoguePopupSFXHandler()
     {
-        print("play sfx - popup");
+        //print("play sfx - popup");
         SFXTrack.PlayOneShot(dialoguePopupSFX, 0.7f);
     }
     void playCollectItemSFXHandler()
     {
-        print("play sfx - item");
+        //print("play sfx - item");
         SFXTrack.PlayOneShot(collectItemSFX, 0.7f);
     }
     void playLockedDoorSFXHandler()
     {
-        print("play sfx - locked door");
+        //print("play sfx - locked door");
         SFXTrack.PlayOneShot(lockedDoorSFX, 1f);
     }
     void playUnlockDoorSFXHandler()
     {
-        print("play sfx - unlock door");
+        //print("play sfx - unlock door");
         SFXTrack.PlayOneShot(unlockDoorSFX, 1f);
     }
     void playCaughtByMarcoSFXHandler()
     {
-        print("play sfx - caught marco");
+        //print("play sfx - caught marco");
         SFXTrack.PlayOneShot(caughtByMarcoSFX, 0.7f);
     }
 

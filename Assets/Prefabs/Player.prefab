@@ -503,6 +503,7 @@ GameObject:
   - component: {fileID: 7053411933501143517}
   - component: {fileID: 1125012002494378752}
   - component: {fileID: 926816195}
+  - component: {fileID: 9028852732798274264}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -679,6 +680,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &9028852732798274264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7053411933501143332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655ac62060444e0429e8263f34c54ea8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canOpenPantryDoor: 0
 --- !u!1 &8834392460100219489
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,6 +20,8 @@ public class AI_Movement : MonoBehaviour
     public List<Transform> startingWaypoints;
     int currentWaypoint = 0;
 
+    Vector3 pausedPosition;
+
     //Each room should have waypoints already created in them. This way, when player hides,
     //we can reach out and get the waypoints for the current room, throw them into this array
     //then iterate through.
@@ -38,11 +40,10 @@ public class AI_Movement : MonoBehaviour
         Idle
     }
 
-    State state = State.Following;
+    public State state = State.Following;
 
     Animator anim;
     public string currentAnimState;
-    Rigidbody2D rb;
 
     private void Awake()
     {
@@ -54,7 +55,20 @@ public class AI_Movement : MonoBehaviour
         agent.updateUpAxis = false;
         waypoints = startingWaypoints;
         anim = GetComponent<Animator>();
-        rb = GetComponent<Rigidbody2D>();
+
+        UI_Update.ACT_DialogueBoxPause += PauseMarco;
+    }
+
+    private void OnDestroy()
+    {
+        UI_Update.ACT_DialogueBoxPause -= PauseMarco;
+    }
+
+    void PauseMarco(bool pause)
+    {
+        if (pause) state = State.Idle;
+        else state = State.Following;
+        pausedPosition = transform.position;
     }
 
     private void Update()
@@ -63,7 +77,7 @@ public class AI_Movement : MonoBehaviour
         UpdatePosition();
         //For debugging
         //TODO: REMOVE  
-        if(Input.GetKeyDown(KeyCode.Space)) state = State.Wandering;
+        //if(Input.GetKeyDown(KeyCode.Space)) state = State.Wandering;
 
         if (agent.velocity.x == 0 && agent.velocity.y == 0) ChangeAnimationState("MarcoIdle");
         else if (agent.velocity.x > 0) ChangeAnimationState("MarcoWalkRight");
@@ -88,7 +102,7 @@ public class AI_Movement : MonoBehaviour
                 target = waypoints[currentWaypoint].position;
                 break;
             case State.Idle:
-                target = transform.position;
+                transform.position = pausedPosition;
                 break;
         }
     }

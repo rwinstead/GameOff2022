@@ -10,6 +10,8 @@ public class AlertTrigger : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            if (ai.state == AI_Movement.State.Idle) return;
+            if (InputHandler.instance.playerHiding) return;
             ai.SetState(AI_Movement.State.Sprinting);
             alertSprite.SetActive(true);
         }
@@ -17,8 +19,11 @@ public class AlertTrigger : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+
         if (collision.gameObject.CompareTag("Player"))
         {
+            if (ai.state == AI_Movement.State.Idle) return;
+            if (InputHandler.instance.playerHiding) return;
             ai.SetState(AI_Movement.State.Following);
             alertSprite.SetActive(false);
         }

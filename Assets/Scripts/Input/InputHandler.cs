@@ -14,10 +14,21 @@ public class InputHandler : MonoBehaviour
 
     protected bool SpacebarTriggered = false;
 
-    // Start is called before the first frame update
-    void Start()
+    public static InputHandler instance;
+    public bool playerCanHide = false;
+    [HideInInspector]
+    public bool playerHiding = false;
+
+    public SpriteRenderer playerSprite;
+    public GameObject FOV;
+    public GameObject FOV2;
+    public PlayerMovement pMovement;
+    public CapsuleCollider2D pCol;
+
+    private void Awake()
     {
-        
+        if (instance == null) instance = this;
+        else DestroyImmediate(this);
     }
 
     // Update is called once per frame
@@ -40,5 +51,35 @@ public class InputHandler : MonoBehaviour
         else {
             SpacebarTriggered = false;
         }
+
+
+        if (Input.GetKeyDown(KeyCode.F)) print(playerCanHide);
+
+        if (Input.GetKeyDown(KeyCode.F) && playerHiding)
+        {
+            playerSprite.enabled = true;
+            FOV.gameObject.SetActive(true);
+            FOV2.gameObject.SetActive(true);
+            AI_Movement.instance.SetState(AI_Movement.State.Following);
+            playerHiding = false;
+            playerCanHide = true;
+            pCol.enabled = true;
+            pMovement.enabled = true;
+            PlayerSingleton.instance.SetTooltip("");
+        }
+
+        else if (Input.GetKeyDown(KeyCode.F) && playerCanHide)
+        {
+            playerSprite.enabled = false;
+            FOV.gameObject.SetActive(false);
+            FOV2.gameObject.SetActive(false);
+            playerHiding = false;
+            pCol.enabled = false;
+            pMovement.enabled = false;
+            playerHiding = true;
+            AI_Movement.instance.SetState(AI_Movement.State.Wandering);
+            PlayerSingleton.instance.SetTooltip("Press F to exit");
+        }
+
     }
 }

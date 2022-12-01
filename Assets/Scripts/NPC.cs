@@ -38,6 +38,7 @@ public class NPC : MonoBehaviour
                 {
                     if(collision.gameObject.GetComponent<PlayerDialogueTracker>().hasTalkedToCooksAboutPie == false)
                     {
+                        //cooks tell where to get pie ingredients and gives key
                         ACT_DialoguePopup?.Invoke(130);
                         ACT_DialoguePopup?.Invoke(131);
                         ACT_DialoguePopup?.Invoke(132);
@@ -84,6 +85,7 @@ public class NPC : MonoBehaviour
                 }
                 else
                 {
+                    //princess first walks in hasn't talked to guards yet
                     ACT_DialoguePopup?.Invoke(90);
                     ACT_DialoguePopup?.Invoke(91);
                     ACT_DialoguePopup?.Invoke(92);
@@ -92,6 +94,7 @@ public class NPC : MonoBehaviour
             else if (NPC_Label == NPCType.Guard) {
                 if(collision.gameObject.GetComponent<PlayerDialogueTracker>().hasTalkedToGuardsAboutPie == false)
                 {
+                    //guards ask for pie
                     ACT_DialoguePopup?.Invoke(100);
                     ACT_DialoguePopup?.Invoke(101);
                     ACT_DialoguePopup?.Invoke(102);
@@ -118,19 +121,29 @@ public class NPC : MonoBehaviour
                 }
                 else if(collision.gameObject.GetComponent<PlayerDialogueTracker>().hasTalkedToGuardsAboutPie == true)
                 {
-                    if(collision.gameObject.GetComponent<PlayerInventory>().CheckForItem(4) == true){
-                        //allow to pass
-                        collision.gameObject.GetComponent<PlayerInventory>().RemoveItem(4);
-                        ACT_OpenCathedralDoor?.Invoke();
+                    if(collision.gameObject.GetComponent<PlayerDialogueTracker>().hasGivenGuardsAboutPie == false){
+                        if(collision.gameObject.GetComponent<PlayerInventory>().CheckForItem(4) == true){
+                            //allow to pass
+                            collision.gameObject.GetComponent<PlayerInventory>().RemoveItem(4);
+                            ACT_OpenCathedralDoor?.Invoke();
+                            hasGivenGuardsPie = true;
+                            ACT_DialoguePopup?.Invoke(0);
+                        else
+                        {
+                            //still waiting for pie
+                            ACT_DialoguePopup?.Invoke(125);
+                            ACT_DialoguePopup?.Invoke(126);
+                            ACT_DialoguePopup?.Invoke(127);
+                        }
 
-                        ACT_DialoguePopup?.Invoke(0);
                     }
-                    else
+                    if(collision.gameObject.GetComponent<PlayerDialogueTracker>().hasGivenGuardsAboutPie == false)
                     {
-                        ACT_DialoguePopup?.Invoke(125);
-                        ACT_DialoguePopup?.Invoke(126);
-                        ACT_DialoguePopup?.Invoke(127);
+                        //already given pie but haven't went in cathedral
                     }
+                    
+                    }
+                    
                     
 
                 }

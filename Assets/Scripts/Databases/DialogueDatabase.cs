@@ -18,7 +18,7 @@ public class DialogueDatabase : MonoBehaviour
         dialogueDb.Add(new DialoguePopup(1,"COOK","Hello your highness! Are you hungry?\nStew is almost ready!","Cook1","Right"));
         dialogueDb.Add(new DialoguePopup(2,"COOK","Oh that creep is back?\nQuick, run to the other room! I'll distract him!","Cook1","Left"));
         dialogueDb.Add(new DialoguePopup(3,"GUARD","Oy! I'm a guard! Bring me pie!","Guard1","Left"));
-        dialogueDb.Add(new DialoguePopup(4,"","This door is locked and requires a key of the same color","","None"));
+        dialogueDb.Add(new DialoguePopup(4,"","This door is locked and requires a key of the same color to open","","None"));
 
         //Intro Scene
         dialogueDb.Add(new DialoguePopup(5, "Morel", "What a lovely feast, Princess Plum.\nYou've really out done yourself this time.", "Morel", "Left"));

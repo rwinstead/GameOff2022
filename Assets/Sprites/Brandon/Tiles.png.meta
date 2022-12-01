@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -2797,7 +2797,6 @@ TextureImporter:
       Tiles-Modified_68: -2130337384
       Tiles-Modified_23: -1713276399
       Tiles-Modified_51: 360640934
-      Tiles-Modified_65: 1195139851
       Tiles-Modified_93: -1259709188
       Tiles-Modified_42: 1118048397
       Tiles-Modified_102: 1197512917
@@ -2831,8 +2830,8 @@ TextureImporter:
       Tiles-Modified_101: -833117829
       Tiles-Modified_100: 1610804823
       Tiles-Modified_127: 490325536
-      Tiles-Modified_56: 1034353929
       Tiles-Modified_88: 833685469
+      Tiles-Modified_56: 1034353929
       Tiles-Modified_112: -1124581323
       Tiles-Modified_110: 39148998
       Tiles-Modified_108: 299926569
@@ -2856,9 +2855,9 @@ TextureImporter:
       Tiles-Modified_71: -2072182153
       Tiles-Modified_35: -406496042
       Tiles-Modified_130: -1016332432
+      Tiles-Modified_43: -533034137
       Tiles-Modified_91: 1248262119
       Tiles-Modified_82: 620792869
-      Tiles-Modified_43: -533034137
       Tiles-Modified_131: 1670663231
       Tiles-Modified_46: -475706874
       Tiles-Modified_94: 1230102921
@@ -2924,12 +2923,13 @@ TextureImporter:
       Tiles-Modified_31: 253892820
       Tiles-Modified_90: -2119946442
       Tiles-Modified_125: 1845764563
-      Tiles-Modified_47: -548583715
+      Tiles-Modified_115: -487579649
       Tiles-Modified_28: -2003500763
+      Tiles-Modified_47: -548583715
       Tiles-Modified_70: -250360794
       Tiles-Modified_89: 136510803
-      Tiles-Modified_115: -487579649
       Tiles-Modified_33: -1067595940
+      Tiles-Modified_65: 1195139851
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

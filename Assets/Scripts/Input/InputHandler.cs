@@ -52,9 +52,6 @@ public class InputHandler : MonoBehaviour
             SpacebarTriggered = false;
         }
 
-
-        if (Input.GetKeyDown(KeyCode.F)) print(playerCanHide);
-
         if (Input.GetKeyDown(KeyCode.F) && playerHiding)
         {
             playerSprite.enabled = true;
@@ -70,6 +67,7 @@ public class InputHandler : MonoBehaviour
 
         else if (Input.GetKeyDown(KeyCode.F) && playerCanHide)
         {
+            PlayerSingleton.instance.movement.thisRb.velocity = Vector2.zero;
             playerSprite.enabled = false;
             FOV.gameObject.SetActive(false);
             FOV2.gameObject.SetActive(false);

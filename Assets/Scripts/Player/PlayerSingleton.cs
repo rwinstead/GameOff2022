@@ -7,6 +7,7 @@ public class PlayerSingleton : MonoBehaviour
 {
     public static PlayerSingleton instance;
     public TextMeshProUGUI tooltip;
+    public PlayerMovement movement;
 
     private void Awake()
     {

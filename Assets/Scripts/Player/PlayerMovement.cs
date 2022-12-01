@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 6f;
     //public GameObject SpawnPoint;
-    private Rigidbody2D thisRb;
+    public Rigidbody2D thisRb;
     
     private Vector2 playerInput_move;
     [SerializeField] FieldOfView FOV;

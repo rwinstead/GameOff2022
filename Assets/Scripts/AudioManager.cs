@@ -28,8 +28,18 @@ public class AudioManager : MonoBehaviour
         Door.ACT_PlayLockedDoorSFX += playLockedDoorSFXHandler;
         Door.ACT_PlayUnlockDoorSFX += playUnlockDoorSFXHandler;
         UI_Update.ACT_PlayDialogueBoxSFX += playDialoguePopupSFXHandler;
+        AI_Movement.playDefeatSound += playCaughtByMarcoSFXHandler;
         //Checkpoint.playCheckpointSFX += playCheckpointSFXHandler;
 
+    }
+
+    private void OnDestroy()
+    {
+        PlayerInventory.ACT_PlayCollectItemSFX -= playCollectItemSFXHandler;
+        Door.ACT_PlayLockedDoorSFX -= playLockedDoorSFXHandler;
+        Door.ACT_PlayUnlockDoorSFX -= playUnlockDoorSFXHandler;
+        UI_Update.ACT_PlayDialogueBoxSFX -= playDialoguePopupSFXHandler;
+        AI_Movement.playDefeatSound -= playCaughtByMarcoSFXHandler;
     }
 
     void playDialoguePopupSFXHandler()

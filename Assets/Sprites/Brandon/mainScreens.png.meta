@@ -125,7 +125,7 @@ TextureImporter:
         width: 109
         height: 94
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,7 +146,7 @@ TextureImporter:
         width: 109
         height: 94
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -167,7 +167,7 @@ TextureImporter:
         width: 109
         height: 94
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -188,7 +188,7 @@ TextureImporter:
         width: 109
         height: 94
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -209,7 +209,7 @@ TextureImporter:
         width: 53
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,6 +217,111 @@ TextureImporter:
       bones: []
       spriteID: 277678a5df0b0914ebedccbae2d41d39
       internalID: -1918250785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: play
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 60
+        width: 28
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25f328a52e50ac3439d63de5a4d8862f
+      internalID: 308449461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ctrls
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 60
+        width: 34
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9bcf7e3c33615b4a91779a55d4550b9
+      internalID: 685224905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cred
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 60
+        width: 29
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 291c7bdb314344645baf7a02b263a657
+      internalID: 262721275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: back
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 61
+        width: 29
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a9fc0677033f0f4fb28b583ae1e5e65
+      internalID: -1129687166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: return
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 63
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b45a36ed4dbef4c9de1bda8450dd1f
+      internalID: 562558812
       vertices: []
       indices: 
       edges: []
@@ -232,6 +337,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      back: -1129687166
       mainScreens_22: 782416478
       mainScreens_13: -246914131
       mainScreens_7: -172690106
@@ -248,13 +354,17 @@ TextureImporter:
       Win: 2043888998
       tryAgain: -1918250785
       mainScreens_5: 388300847
+      cred: 262721275
       mainScreens_20: 1017801379
       mainScreens_10: 1158450353
       mainScreens_15: -872230720
       mainScreens_21: 432926972
       mainScreens_19: -113900843
+      play: 308449461
       mainScreens_8: 656003291
       mainScreens_18: -634179813
+      return: 562558812
+      ctrls: 685224905
       mainScreens_11: 1049131771
   spritePackingTag: 
   pSDRemoveMatte: 0

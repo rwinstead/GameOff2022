@@ -91,25 +91,25 @@ public class DialogueDatabase : MonoBehaviour
         dialogueDb.Add(new DialoguePopup(151, "Cook 1", "That was quick! I'm glad you found the ingredients, that pantry is a mess!", "Cook1", "Left"));
         dialogueDb.Add(new DialoguePopup(152, "Princess Plum", "Well thankfully someone had laid all the ingredients out neatly on the table!", "Princess", "Right"));
         dialogueDb.Add(new DialoguePopup(153, "Cook 2", "That's the emergency pie stash! See babe, I told you that would come in handy!  Otherwise it takes forever to rummage around all those cabinents.", "Cook2", "Left"));
-        dialogueDb.Add(new DialoguePopup(154, "Cook 1", "Yes dear, you're a genius", "Cook1", "Left"));
+        dialogueDb.Add(new DialoguePopup(154, "Cook 1", "Yes dear, you're a genius.", "Cook1", "Left"));
         dialogueDb.Add(new DialoguePopup(155, "Cook 2", ":D", "Cook2", "Left"));
         dialogueDb.Add(new DialoguePopup(156, "Princess Plum", "If its an emergency stash why don't you keep it in the kitchen?", "Princess", "Right"));
         dialogueDb.Add(new DialoguePopup(157, "Cook 2", "...", "Cook2", "Left"));
         dialogueDb.Add(new DialoguePopup(158, "Cook 2", "That would make more sense wouldn't it?", "Cook2", "Left"));
-        dialogueDb.Add(new DialoguePopup(159, "Cook 1", "Shhhh don't think about it too much it breaks the immersion", "Cook1", "Left"));
+        dialogueDb.Add(new DialoguePopup(159, "Cook 1", "Shhhh don't think about it too much it breaks the immersion.", "Cook1", "Left"));
         dialogueDb.Add(new DialoguePopup(160, "Princess Plum", "Huh?", "Princess", "Right"));
-        dialogueDb.Add(new DialoguePopup(161, "Cook 1", "Oh look your pie is ready!  Here you go!", "Cook1", "Left"));
+        dialogueDb.Add(new DialoguePopup(161, "Cook 1", "Oh look your pie is ready! Here you go!", "Cook1", "Left"));
         dialogueDb.Add(new DialoguePopup(162, "Princess Plum", "Thanks! You guys are lifesavers!", "Princess", "Right"));
         dialogueDb.Add(new DialoguePopup(163, "Cook 1", "Anytime princess!", "Cook1", "Left"));
 
         dialogueDb.Add(new DialoguePopup(170, "Princess Plum", "Here's your stupid pie.", "Princess", "Right"));
         dialogueDb.Add(new DialoguePopup(171, "Guard 2", "Oh, it's glorious! It smells delicious.", "Guard2", "Left"));
-        dialogueDb.Add(new DialoguePopup(172, "Guard 2", "And so warm! It must be stright from the oven.  This is perfect, thank you princess.", "Guard2", "Left"));
+        dialogueDb.Add(new DialoguePopup(172, "Guard 2", "And so warm! It must be straight from the oven.  This is perfect, thank you princess.", "Guard2", "Left"));
         dialogueDb.Add(new DialoguePopup(173, "Guard 1", "Would you care for a slice? It's really quite ta-", "Guard1", "Left"));
         dialogueDb.Add(new DialoguePopup(174, "Princess Plum", "Yeah yeah can I go in now?", "Princess", "Right"));
         dialogueDb.Add(new DialoguePopup(175, "Guard 1", "*shrug*\nSure, your loss.", "Guard1", "Left"));
 
-
+        dialogueDb.Add(new DialoguePopup(176, "Marco", "I know you're in here, Princess! Ima coming!", "Marco", "Left"));
     }
 
     public DialoguePopup Lookup(int popupID){

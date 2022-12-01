@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
+using System;
 
 public class AI_Movement : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class AI_Movement : MonoBehaviour
     /// Use this singleton to change the state machine of the AI
     /// </summary>
     public static AI_Movement instance;
+
+    public static Action playDefeatSound;
 
     [Header("Movement Speeds")]
     public float walkingSpeed = 3f;
@@ -44,6 +48,8 @@ public class AI_Movement : MonoBehaviour
 
     Animator anim;
     public string currentAnimState;
+
+    public GameObject loseScreen;
 
     private void Awake()
     {
@@ -135,6 +141,23 @@ public class AI_Movement : MonoBehaviour
 
         anim.Play(newState);
         currentAnimState = newState;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            Defeat();
+        }
+    }
+
+    void Defeat()
+    {
+        playDefeatSound?.Invoke();
+        loseScreen.gameObject.SetActive(true);
+        InputHandler.instance.hasLost = true;
+        PauseMarco(true);
+        PlayerSingleton.instance.movement.moveSpeed = 0;
     }
 
 }

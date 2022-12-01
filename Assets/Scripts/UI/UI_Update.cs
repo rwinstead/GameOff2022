@@ -47,6 +47,7 @@ public class UI_Update : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        //DontDestroyOnLoad(gameObject);
         NPC.ACT_DialoguePopup += DialoguePopupHandler;
         Door.ACT_DialoguePopup += DialoguePopupHandler;
         OpeningScene.ACT_DialoguePopup += DialoguePopupHandler;
@@ -64,6 +65,18 @@ public class UI_Update : MonoBehaviour
         InventorySlot4.SetActive(false);
         InventorySlot5.SetActive(false);
         InventorySlot6.SetActive(false);
+    }
+
+    private void OnDestroy()
+    {
+        NPC.ACT_DialoguePopup -= DialoguePopupHandler;
+        Door.ACT_DialoguePopup -= DialoguePopupHandler;
+        OpeningScene.ACT_DialoguePopup -= DialoguePopupHandler;
+        ItemPickup.ACT_DialoguePopup -= DialoguePopupHandler;
+        Interactables.ACT_DialoguePopup -= DialoguePopupHandler;
+
+        PlayerInventory.ACT_UpdateInventory -= UpdateInventoryHUD;
+        InputHandler.ACT_PlayerSpacebarPressed -= DialogueInputHandler;
     }
 
     // Update is called once per frame

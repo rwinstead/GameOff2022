@@ -31,6 +31,11 @@ public class OpeningScene : MonoBehaviour
         UI_Update.ACT_ResolvedDialogue += TriggerFromDialogue;
     }
 
+    private void OnDestroy()
+    {
+        UI_Update.ACT_ResolvedDialogue -= TriggerFromDialogue;
+    }
+
     private void Start()
     {
         ACT_DialoguePopup?.Invoke(5);
@@ -83,7 +88,7 @@ public class OpeningScene : MonoBehaviour
         Princess.gameObject.SetActive(false);
         openingCam.gameObject.SetActive(false);
         mainPlayer.gameObject.SetActive(true);
-        mainMarco.gameObject.SetActive(true);
+        StartCoroutine(SpawnMarco());
     }
 
     IEnumerator LerpPosition(Vector2 targetPosition, float duration, Transform character, string name)
@@ -98,6 +103,13 @@ public class OpeningScene : MonoBehaviour
         }
         character.position = targetPosition;
         CharacterReachedDestination(name);
+    }
+
+    IEnumerator SpawnMarco()
+    {
+        yield return new WaitForSeconds(4f);
+        mainMarco.gameObject.SetActive(true);
+        ACT_DialoguePopup?.Invoke(176);
     }
 
 }

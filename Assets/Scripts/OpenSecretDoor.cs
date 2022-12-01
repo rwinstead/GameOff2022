@@ -10,6 +10,11 @@ public class OpenSecretDoor : MonoBehaviour
         Interactables.ACT_OpenSecretDoor += OpenSecretDoorHandler;       
     }
 
+    private void OnDestroy()
+    {
+        Interactables.ACT_OpenSecretDoor -= OpenSecretDoorHandler;
+    }
+
     void OpenSecretDoorHandler(){
         gameObject.SetActive(false);
     }

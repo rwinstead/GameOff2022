@@ -13,6 +13,14 @@ public class HidingPlace : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            if (PlayerSingleton.instance.tooltip.text == "") PlayerSingleton.instance.SetTooltip("Press F to hide");
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

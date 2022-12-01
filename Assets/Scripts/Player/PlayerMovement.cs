@@ -29,6 +29,12 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    private void OnDestroy()
+    {
+        InputHandler.ACT_PlayerMoveInput -= PlayerControlHandler;
+        UI_Update.ACT_DialogueBoxPause -= DialogueBoxPauseHandler;
+    }
+
     // Update is called once per frame
     void Update()
     {

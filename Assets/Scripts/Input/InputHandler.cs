@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class InputHandler : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class InputHandler : MonoBehaviour
     public PlayerMovement pMovement;
     public CapsuleCollider2D pCol;
 
+    public bool hasLost = false;
+
     private void Awake()
     {
         if (instance == null) instance = this;
@@ -45,6 +48,13 @@ public class InputHandler : MonoBehaviour
         ACT_PlayerMoveInput?.Invoke(rawInput);
 
         if(Input.GetKeyDown(KeyCode.Space)){
+
+            if (hasLost)
+            {
+                Scene scene = SceneManager.GetActiveScene();
+                SceneManager.LoadScene(scene.name);
+            }
+
             ACT_PlayerSpacebarPressed?.Invoke();
             SpacebarTriggered = true;
         }

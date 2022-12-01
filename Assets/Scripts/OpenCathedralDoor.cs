@@ -10,6 +10,11 @@ public class OpenCathedralDoor : MonoBehaviour
         NPC.ACT_OpenCathedralDoor += OpenCathedralDoorHandler;       
     }
 
+    private void OnDestroy()
+    {
+        NPC.ACT_OpenCathedralDoor -= OpenCathedralDoorHandler;
+    }
+
     void OpenCathedralDoorHandler(){
         gameObject.SetActive(false);
     }

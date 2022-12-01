@@ -14,45 +14,61 @@ public class Interactables : MonoBehaviour
 
     private bool hasTriggered = false;
 
+    bool inArea = false;
+
+    GameObject player;
+
     //This script should be  used for any objects in the scene that can be examined,
     //and creates a dialogue event
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            PlayerSingleton.instance.SetTooltip("Press F to Interact");
+            PlayerSingleton.instance.SetTooltip("Press F to interact");
+            inArea = true;
+            player = collision.gameObject;
         }
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F) && inArea)
+        {
+            if (hasTriggered == false)
+            {
+                if (item == InteractableItem.OpenSecretDoor)
+                {
+                    ACT_OpenSecretDoor?.Invoke();
+                    ACT_DialoguePopup?.Invoke(21);
+                    hasTriggered = true;
+
+                }
+                if (item == InteractableItem.GiveWardrobeKey)
+                {
+                    player.GetComponent<PlayerInventory>().AddItem(0);
+                    ACT_DialoguePopup?.Invoke(22);
+                    hasTriggered = true;
+                }
+            }
+        }
+    }
+
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            if (Input.GetKey(KeyCode.F))
-            {
-                if(hasTriggered == false){
-                    if(item == InteractableItem.OpenSecretDoor){
-                        ACT_OpenSecretDoor?.Invoke();
-                        ACT_DialoguePopup?.Invoke(21);
-                        hasTriggered = true;
-                        
-                    }
-                    if(item == InteractableItem.GiveWardrobeKey){
-                        collision.gameObject.GetComponent<PlayerInventory>().AddItem(0);
-                        ACT_DialoguePopup?.Invoke(22);
-                        hasTriggered = true;                    
-                    }
-                }
-                
-            }
+            if (PlayerSingleton.instance.tooltip.text == "") PlayerSingleton.instance.SetTooltip("Press F to interact");
         }
     }
+
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             PlayerSingleton.instance.SetTooltip("");
+            inArea = false;
         }
     }
 }

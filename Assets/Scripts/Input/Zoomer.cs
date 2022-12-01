@@ -21,6 +21,11 @@ public class Zoomer : MonoBehaviour
 
     }
 
+    private void OnDestroy()
+    {
+        InputHandler.ACT_ZoomControl -= ZoomControl;
+    }
+
     // Update is called once per frame
     void Update()
     {

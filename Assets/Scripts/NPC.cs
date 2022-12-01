@@ -121,13 +121,14 @@ public class NPC : MonoBehaviour
                 }
                 else if(collision.gameObject.GetComponent<PlayerDialogueTracker>().hasTalkedToGuardsAboutPie == true)
                 {
-                    if(collision.gameObject.GetComponent<PlayerDialogueTracker>().hasGivenGuardsAboutPie == false){
+                    if(collision.gameObject.GetComponent<PlayerDialogueTracker>().hasGivenGuardsPie == false){
                         if(collision.gameObject.GetComponent<PlayerInventory>().CheckForItem(4) == true){
                             //allow to pass
                             collision.gameObject.GetComponent<PlayerInventory>().RemoveItem(4);
                             ACT_OpenCathedralDoor?.Invoke();
-                            hasGivenGuardsPie = true;
+                            collision.gameObject.GetComponent<PlayerDialogueTracker>().hasGivenGuardsPie = true;
                             ACT_DialoguePopup?.Invoke(0);
+                        }
                         else
                         {
                             //still waiting for pie
@@ -137,14 +138,10 @@ public class NPC : MonoBehaviour
                         }
 
                     }
-                    if(collision.gameObject.GetComponent<PlayerDialogueTracker>().hasGivenGuardsAboutPie == false)
+                    if(collision.gameObject.GetComponent<PlayerDialogueTracker>().hasGivenGuardsPie == false)
                     {
                         //already given pie but haven't went in cathedral
-                    }
-                    
-                    }
-                    
-                    
+                    }                 
 
                 }
 

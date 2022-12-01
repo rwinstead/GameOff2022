@@ -48,6 +48,7 @@ public class Interactables : MonoBehaviour
                     player.GetComponent<PlayerInventory>().AddItem(0);
                     ACT_DialoguePopup?.Invoke(22);
                     hasTriggered = true;
+                    gameObject.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/openchest");
                 }
             }
         }

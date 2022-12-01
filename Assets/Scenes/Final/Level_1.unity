@@ -13458,6 +13458,7 @@ MonoBehaviour:
   southDoors: {fileID: 533600781}
   rightDoors: {fileID: 849986859}
   openingCam: {fileID: 2021337589}
+  mainCam: {fileID: 784599608}
   mainPlayer: {fileID: 375098880}
   mainMarco: {fileID: 1978364791}
 --- !u!4 &383408087 stripped
@@ -16984,6 +16985,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!20 &784599608 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 7053411932198244896, guid: be84f59e619d2454bb59bfbcd5c0199e, type: 3}
+  m_PrefabInstance: {fileID: 1410092480}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &788045256 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2858935806481966884, guid: 92fcab68c5ee8ef4ea57d70607fde873, type: 3}
@@ -25958,6 +25964,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7053411932198244899, guid: be84f59e619d2454bb59bfbcd5c0199e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7053411933501143329, guid: be84f59e619d2454bb59bfbcd5c0199e, type: 3}
       propertyPath: m_RootOrder
       value: 2

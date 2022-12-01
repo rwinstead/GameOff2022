@@ -19,6 +19,7 @@ public class OpeningScene : MonoBehaviour
     public GameObject rightDoors;
 
     public Camera openingCam;
+    public Camera mainCam;
 
     //Player that is used in actual game, not opening scene
     public GameObject mainPlayer;
@@ -87,6 +88,7 @@ public class OpeningScene : MonoBehaviour
     {
         Princess.gameObject.SetActive(false);
         openingCam.gameObject.SetActive(false);
+        mainCam.gameObject.SetActive(true);
         mainPlayer.gameObject.SetActive(true);
         StartCoroutine(SpawnMarco());
     }

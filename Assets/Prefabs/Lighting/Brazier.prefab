@@ -146,6 +146,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6495974457341986826}
   - component: {fileID: 2936424263835223456}
+  - component: {fileID: 6278342891073890942}
   m_Layer: 0
   m_Name: Brazier Base
   m_TagString: Untagged
@@ -220,6 +221,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!70 &6278342891073890942
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5121707592453777735}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.005442021, y: 0.021767737}
+  m_Size: {x: 1.0108854, y: 0.6081636}
+  m_Direction: 1
 --- !u!1 &6552432731322146320
 GameObject:
   m_ObjectHideFlags: 0

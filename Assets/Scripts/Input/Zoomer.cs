@@ -19,6 +19,8 @@ public class Zoomer : MonoBehaviour
         
         InputHandler.ACT_ZoomControl += ZoomControl;
 
+        cameraMain.gameObject.SetActive(false);
+
     }
 
     private void OnDestroy()

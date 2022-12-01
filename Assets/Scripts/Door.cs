@@ -38,8 +38,16 @@ public class Door : MonoBehaviour
                     transform.parent.gameObject.SetActive(false);
                 }
                 else{
-                    ACT_PlayLockedDoorSFX?.Invoke();
-                    ACT_DialoguePopup?.Invoke(4);
+                    if(itemRequired == 6)
+                    {
+                        ACT_DialoguePopup?.Invoke(23);
+                    }
+                    else
+                    {
+                        ACT_PlayLockedDoorSFX?.Invoke();
+                        ACT_DialoguePopup?.Invoke(4);
+                    }
+                    
                 }
             }
             else{

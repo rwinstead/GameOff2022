@@ -16,6 +16,7 @@ public class ItemDatabase : MonoBehaviour
         itemDb.Add(new Item(3, "Armory Key", "Key to the Armory", "redkey"));
         itemDb.Add(new Item(4, "Blueberry Pie", "A tasty blueberry pie", "pie"));
         itemDb.Add(new Item(5, "Pie Ingredients", "Ingredients to make a pie", "ingredients"));
+        itemDb.Add(new Item(6, "Parisol", "The coveted parisol", "parisol"));
     }
 
     public Item Lookup(int itemID){

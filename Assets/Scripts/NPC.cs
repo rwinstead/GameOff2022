@@ -127,7 +127,12 @@ public class NPC : MonoBehaviour
                             collision.gameObject.GetComponent<PlayerInventory>().RemoveItem(4);
                             ACT_OpenCathedralDoor?.Invoke();
                             collision.gameObject.GetComponent<PlayerDialogueTracker>().hasGivenGuardsPie = true;
-                            ACT_DialoguePopup?.Invoke(0);
+                            ACT_DialoguePopup?.Invoke(170);
+                            ACT_DialoguePopup?.Invoke(171);
+                            ACT_DialoguePopup?.Invoke(172);
+                            ACT_DialoguePopup?.Invoke(173);
+                            ACT_DialoguePopup?.Invoke(174);
+                            ACT_DialoguePopup?.Invoke(175);
                         }
                         else
                         {

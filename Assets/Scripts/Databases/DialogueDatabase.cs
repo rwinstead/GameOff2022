@@ -35,6 +35,8 @@ public class DialogueDatabase : MonoBehaviour
         dialogueDb.Add(new DialoguePopup(21, "", "You hear something click in the armor and a deep rumbling in the room.  Perhaps a door was opened?", "", "None"));
         //Opened Chest with Wardrobe Key
         dialogueDb.Add(new DialoguePopup(22, "", "You found the blue key! Perhaps it opens the blue door?", "", "None"));
+        //Need Parisol to Leave
+        dialogueDb.Add(new DialoguePopup(23, "Princess Plum", "Oh I almost forgot! It's raining, I can't leave without my parisol! I left it in the wardrobe.", "Princess", "Right"));
 
         dialogueDb.Add(new DialoguePopup(90,"Cook 1","Hello your highness! Are you hungry?\nStew is almost ready!","Cook1","Right"));
         dialogueDb.Add(new DialoguePopup(91, "Princess Plum", "Not right now thanks! I'm trying to hide from this guy! He's right behind me!", "Princess", "Right"));
@@ -99,6 +101,13 @@ public class DialogueDatabase : MonoBehaviour
         dialogueDb.Add(new DialoguePopup(161, "Cook 1", "Oh look your pie is ready!  Here you go!", "Cook1", "Left"));
         dialogueDb.Add(new DialoguePopup(162, "Princess Plum", "Thanks! You guys are lifesavers!", "Princess", "Right"));
         dialogueDb.Add(new DialoguePopup(163, "Cook 1", "Anytime princess!", "Cook1", "Left"));
+
+        dialogueDb.Add(new DialoguePopup(170, "Princess Plum", "Here's your stupid pie.", "Princess", "Right"));
+        dialogueDb.Add(new DialoguePopup(171, "Guard 2", "Oh, it's glorious! It smells delicious.", "Guard2", "Left"));
+        dialogueDb.Add(new DialoguePopup(172, "Guard 2", "And so warm! It must be stright from the oven.  This is perfect, thank you princess.", "Guard2", "Left"));
+        dialogueDb.Add(new DialoguePopup(173, "Guard 1", "Would you care for a slice? It's really quite ta-", "Guard1", "Left"));
+        dialogueDb.Add(new DialoguePopup(174, "Princess Plum", "Yeah yeah can I go in now?", "Princess", "Right"));
+        dialogueDb.Add(new DialoguePopup(175, "Guard 1", "*shrug*\nSure, your loss.", "Guard1", "Left"));
 
 
     }

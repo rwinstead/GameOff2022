@@ -75,7 +75,13 @@ public class UI_Update : MonoBehaviour
     void UpdateInventoryHUD(Item item){
         print("Update HUD");
         int numItems = inventory.InventoryList.Count;
-        print(numItems);
+        InventorySlot1.SetActive(false);
+        InventorySlot2.SetActive(false);
+        InventorySlot3.SetActive(false);
+        InventorySlot4.SetActive(false);
+        InventorySlot5.SetActive(false);
+        InventorySlot6.SetActive(false);
+
         if(numItems >= 1)
         {
             InventorySlot1.SetActive(true);

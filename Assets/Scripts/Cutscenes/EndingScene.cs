@@ -87,7 +87,7 @@ public class EndingScene : MonoBehaviour
     void PrincessEscape()
     {
         playerAnim.Play("PrincessWalkLeft");
-        StartCoroutine(LerpPosition(new Vector2(PrincessMovesTo2.position.x, PrincessMovesTo2.position.y), 3f, Princess, "Princess2"));
+        StartCoroutine(LerpPosition(new Vector2(PrincessMovesTo2.position.x, PrincessMovesTo2.position.y), 1.25f, Princess, "Princess2"));
     }
 
     void CharacterReachedDestination(string character)

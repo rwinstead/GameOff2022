@@ -127,7 +127,7 @@ public class EndingScene : MonoBehaviour
     IEnumerator WaitToEnd()
     {
         yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene("EndScreen");
+        SceneManager.LoadScene("VictoryPage");
     }
 
 }

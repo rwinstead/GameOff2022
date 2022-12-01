@@ -110,6 +110,16 @@ public class DialogueDatabase : MonoBehaviour
         dialogueDb.Add(new DialoguePopup(175, "Guard 1", "*shrug*\nSure, your loss.", "Guard1", "Left"));
 
         dialogueDb.Add(new DialoguePopup(176, "Marco", "I know you're in here, Princess! Ima coming!", "Marco", "Left"));
+
+        dialogueDb.Add(new DialoguePopup(177, "Princess", "I can't believe it. I finally escaped that lunatic.", "Princess", "Left"));
+        dialogueDb.Add(new DialoguePopup(178, "Marco", "What a lovely chapel you have here, Princess.\nAnd the mood lighting? Wow. Just wow.", "Marco", "Right"));
+        dialogueDb.Add(new DialoguePopup(179, "Princess", "Ahhh! How did you get past the guards?", "Princess", "Left"));
+        dialogueDb.Add(new DialoguePopup(180, "Marco", "Easy. Two pies.", "Marco", "Right"));
+        dialogueDb.Add(new DialoguePopup(181, "Princess", "I knew it. One pie per guard makes way more sense...\nDoesn't matter! I'm getting the hell out of here.", "Princess", "Left"));
+        dialogueDb.Add(new DialoguePopup(182, "Marco", "Wait! At least hear me out, no?\nYou pretty ones never like-a the nice guys like me.", "Marco", "Right"));
+        dialogueDb.Add(new DialoguePopup(183, "Princess", "Maybe you shouldn't be chasing me around my own castle? I don't even know you.\nNow, I'll be taking my leave.", "Princess", "Left"));
+        dialogueDb.Add(new DialoguePopup(184, "Marco", "Please...don't say it. Not again.", "Marco", "Right"));
+        dialogueDb.Add(new DialoguePopup(185, "Princess", "I'm afraid... your princess is in another castle, Marco.", "Princess", "Left"));
     }
 
     public DialoguePopup Lookup(int popupID){

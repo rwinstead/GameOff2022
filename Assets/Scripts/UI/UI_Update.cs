@@ -56,6 +56,7 @@ public class UI_Update : MonoBehaviour
 
         PlayerInventory.ACT_UpdateInventory += UpdateInventoryHUD;
         InputHandler.ACT_PlayerSpacebarPressed += DialogueInputHandler;
+        EndingScene.ACT_DialoguePopup += DialoguePopupHandler;
 
         DialogueBoxLeft.SetActive(false);
         DialogueBoxRight.SetActive(false);
@@ -77,6 +78,7 @@ public class UI_Update : MonoBehaviour
 
         PlayerInventory.ACT_UpdateInventory -= UpdateInventoryHUD;
         InputHandler.ACT_PlayerSpacebarPressed -= DialogueInputHandler;
+        EndingScene.ACT_DialoguePopup -= DialoguePopupHandler;
     }
 
     // Update is called once per frame
@@ -187,6 +189,7 @@ public class UI_Update : MonoBehaviour
             DialogueBoxActive = false;
             ACT_DialogueBoxPause?.Invoke(false);
         }
+        //print(prevDialogueID);
         ACT_ResolvedDialogue?.Invoke(prevDialogueID);
 
     }
